@@ -3,16 +3,8 @@ This is instructions for how to set up your Linux machine with Deniable Disk Enc
 
 ## Step 1: Grub with support for plain mode
 
-Years ago, we could simply use [GrubCrypt](http://grub.johnlane.ie/) as it supported plain mode. Unfortunately, it is no longer being updated and doesnt compile so instead we will patch Grub with the following [patch](https://lists.nongnu.org/archive/html/grub-devel/2022-12/msg00046.html).
-
-To do this, first clone Grub (At the time of writing Grub is on commit 7259d55ffcf124e32eafb61aa381f9856e98a708)
+The fork of Grub we will use for decrypting the drive is [GrubCrypt](http://grub.johnlane.ie/) (There exists other forks and patches one could use however GrubCrypt is what Libreboot uses so that is what we will use). To install GrubCrypt, you can install it from source and compile it or, if you're using an Arch based system, you can install the following [package](https://aur.archlinux.org/packages/grub-luks-keyfile) from the AUR manually or via a AUR-helper like paru:
 
 ```
-git clone https://git.savannah.gnu.org/git/grub.git
-```
-
-Next, download (or copy/paste) the patch mentioned above and run
-
-```
-git apply [filename].patch
+paru -S grub-luks-keyfile
 ```
