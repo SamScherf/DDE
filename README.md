@@ -1,5 +1,5 @@
-# DDE
-This is instructions for how to set up your Linux machine with Deniable Disk Encryption (DDE). In order to do this, we will use plain mode encryption on the whole disk and store grub on a seperate flash drive. Normal grub doesn't support decrypting plain mode so we will need to use a fork of Grub.
+# Deniable Disk Encryption (DDE)
+This is instructions for how to set up your Linux machine with Deniable Disk Encryption. In order to do this, we will use plain mode encryption on the whole disk and store grub on a seperate flash drive. Normal grub doesn't support decrypting plain mode so we will need to use a fork of Grub.
 
 ## Step 1: Prepare a USB drive
 
